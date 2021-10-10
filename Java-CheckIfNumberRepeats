@@ -1,0 +1,40 @@
+
+import java.util.Scanner;
+
+public class Prob02 {
+
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Enter the integers between 1 and 100: ");
+        int store = input.nextInt();
+        
+        int[] array = new int[100];        
+        for(int i=0; i<array.length; i++)
+        {
+            if(array[i] == 0)
+            {
+                break;
+            }
+        }
+        int temp = 0;
+        
+        int[] count = new int[100];
+        for(int i=0; i<array.length; i++)
+        {
+            temp = array[i];
+            count[temp]++;
+        }
+        for(int i=1; i<count.length; i++)
+        {
+            if(count[i] > 0 && count[i] == 1)
+            {
+                System.out.println(i + " occurs" + count[i] + " times");
+            }
+            else if(count[i] >= 2)
+            {
+                System.out.println(i + " occurs" + count[i] + " times");
+            }
+        }
+    }
